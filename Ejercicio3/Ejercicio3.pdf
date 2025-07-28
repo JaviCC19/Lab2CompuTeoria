@@ -1,0 +1,21 @@
+¿Qué es el algoritmo de Shunting Yard?
+
+El algoritmo de Shunting Yard fue creado por el científico Edsger Dijkstra. Su propósito es transformar expresiones escritas en notación infix (como a|b) a notación postfix o notación polaca inversa (como ab|). Esta conversión es útil porque las expresiones postfix son más fáciles de evaluar mediante máquinas o programas, ya que no requieren paréntesis ni reglas complejas de precedencia.
+
+¿Cómo funciona?
+
+El algoritmo procesa la expresión símbolo por símbolo, siguiendo una serie de pasos para asegurarse de que el orden de las operaciones se respete. Para lograrlo, utiliza dos estructuras principales:
+
+    Una pila para almacenar operadores y paréntesis.
+
+    Una lista de salida donde se va construyendo la expresión postfix.
+
+Durante el proceso:
+
+    Los operandos (como letras o números) se envían directamente a la salida.
+
+    Los operadores (|, ., *, +, etc.) se colocan en la pila según su precedencia y asociatividad. Si hay operadores con mayor o igual precedencia en la cima de la pila, estos se pasan primero a la salida.
+
+    Los paréntesis sirven para controlar el orden de las operaciones. Cuando se encuentra un paréntesis de cierre, se sacan operadores de la pila hasta encontrar el paréntesis de apertura correspondiente.
+
+Al finalizar la lectura de la expresión, todos los operadores restantes en la pila se vacían hacia la salida.
